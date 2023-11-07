@@ -1,0 +1,36 @@
+.header{
+    grid-area: h;
+    width: 100%;
+    text-align:center;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "headerLogo titleHeader coinsHeader";
+    grid-template-columns: 4fr 4fr 4fr;
+}
+.hidden_header{
+    display: none;
+}
+.headerLogo{
+    grid-area: headerLogo;
+}
+.title{
+    grid-area: titleHeader;
+    color: rgb(175,175,175);
+    font-size: 19px;
+    padding-top: 20px;
+    font-weight: bold;
+    border: 2px solid blue;
+}
+#coins{
+    grid-area: coinsHeader;
+    margin-top: 20px;
+}
+#coins_text{
+    float: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+#coins_img{
+    float: left;
+    margin-left: 5px;
+}

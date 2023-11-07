@@ -1,0 +1,16 @@
+.sidebar{
+    grid-area: nav;
+    border-right: 1px grey solid;
+}
+.sidebar_link{
+
+}
+a:hover{
+    cursor: pointer;
+}
+.sidebar_link_active{
+    background-color: skyblue;
+    color: white;
+    border: 2px blue solid;
+    font-weight: bold;
+}

@@ -1,0 +1,58 @@
+.text1{
+    width: 300px;
+    height: 300px;
+    margin-left: 375px;
+    margin-top: 15px;
+    text-align: center;
+    color: #4b99d2;
+    border: 1px solid #4b99d2;
+    border-radius: 25px;
+    padding: 5px;
+    float: left;
+}
+.text1:hover{
+    cursor: pointer;
+}
+.buttonsLine{
+    float: left;
+    width: 100%;
+    margin-left: 100px;
+}
+h1{
+    color: #003399;
+    font-size: 34pt;
+}
+button{
+    margin-bottom: 15px;
+}
+.nextButton{
+    margin-top: 55px;
+    padding: 15px 45px  15px 45px;
+    background-color: #003399;
+    color: white;
+    font-size: 28pt;
+    border: 1px solid #003399;
+    border-radius: 15px;
+    width: 350px;
+    float: left;
+    margin-left: 335px;
+}
+.skipButton{
+    margin-top: 55px;
+    padding: 15px 45px  15px 45px;
+    background-color: grey;
+    color: black;
+    font-size: 28pt;
+    border: 1px solid #003399;
+    border-radius: 15px;
+    width: 350px;
+    float: left;
+    margin-left: 465px;
+}
+.nextButton:hover{
+    background-color: white;
+    color: #003399;
+}
+img{
+    border-radius: 25px;
+}

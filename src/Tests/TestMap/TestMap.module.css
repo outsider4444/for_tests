@@ -1,0 +1,26 @@
+.nextButton{
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: #003399;
+    color: white;
+    font-size: 28pt;
+    border: 1px solid #003399;
+    border-radius: 50%
+}
+.nextButton:hover{
+    background-color: white;
+    color: #003399;
+    cursor: pointer;
+}
+#secondBtn{
+    margin-left: -65px;
+}
+#thirdBtn{
+    margin-left: -130px;
+}
+#fourBtn{
+    margin-left: -65px;
+}
+#fiveBtn{
+ }

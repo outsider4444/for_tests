@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  display:grid;
+  grid-template-areas:
+    "nav h h"
+    "nav content content";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 9fr 1fr;
 }
 
 .App-logo {
@@ -27,12 +32,9 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content{
+  grid-area: content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
