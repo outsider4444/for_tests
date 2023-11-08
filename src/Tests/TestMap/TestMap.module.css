@@ -13,6 +13,10 @@
     color: #003399;
     cursor: pointer;
 }
+#firstBtn{
+    background-color: green;
+    border: 1px solid green;
+}
 #secondBtn{
     margin-left: -65px;
 }

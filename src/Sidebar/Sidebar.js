@@ -38,8 +38,12 @@ const Sidebar = () => {
                     }} style={{ textAlign: "center" }}> {" "}
                         <h2>Duplo</h2>
                     </MenuItem>
-                    <MenuItem icon={<PeopleOutlinedIcon />} onClick={() => toLink("/")} className={location.pathname === "/" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>Карта</MenuItem>
-                    <MenuItem icon={<ContactsOutlinedIcon />} onClick={() => toLink("/sections")} className={location.pathname === "/sections" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>Секции</MenuItem>
+                    <MenuItem icon={<PeopleOutlinedIcon />} component={<Link to="/" />} className={location.pathname === "/" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>
+                        Карта
+                    </MenuItem>
+                    <MenuItem icon={<ContactsOutlinedIcon />} component={<Link to="/sections" />} className={location.pathname === "/sections" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>
+                        Секции
+                    </MenuItem>
                     <MenuItem icon={<ReceiptOutlinedIcon />}>Profile</MenuItem>
                     <MenuItem icon={<HelpOutlineOutlinedIcon />}>FAQ</MenuItem>
                     <MenuItem icon={<CalendarTodayOutlinedIcon />}>Calendar</MenuItem>

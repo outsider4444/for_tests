@@ -32,6 +32,7 @@
 .App-link {
   color: #61dafb;
 }
+
 .content{
   grid-area: content;
   text-align: center;
