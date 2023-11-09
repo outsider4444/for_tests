@@ -1,3 +1,20 @@
-.comparisonbtn{
-    background-color: red;
+.button-list {
+    display: flex;
+    justify-content: space-around;
 }
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #3498db; /* Цвет фона для выбранных пар */
+    color: #fff; /* Цвет текста для выбранных пар */
+}
+
+/* Другие стили могут быть добавлены по вашему усмотрению */

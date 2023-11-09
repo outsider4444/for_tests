@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
+import {NavLink} from "react-router-dom";
 
+
+// Todo Что-то не так с распределением баллов за ответ. Хм...
 const TestMultipleChoice = () => {
     const [score, setScore] = useState(0);
     const [selectedAnswers, setSelectedAnswers] = useState(Array(4).fill(false));
@@ -36,6 +39,7 @@ const TestMultipleChoice = () => {
             <button onClick={() => handleButtonClick(3)} id={"btn3"}>Ответ 4</button>
             <p>Ваш балл: {score}</p>
             <button onClick={calculateScore}>Подсчитать баллы</button>
+            <NavLink to={"/test/question4"}>Далее</NavLink>
         </div>
     );
 
