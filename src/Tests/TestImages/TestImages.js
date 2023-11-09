@@ -18,17 +18,20 @@ const TestImages = () => {
             div2.style = "none"
             div3.style = "none"
             div4.style = "none"
-        } else if (valueDiv === "second"){
+        }
+        else if (valueDiv === "second"){
             div1.style = "none"
             div2.style = "font-weight: bold; background: #4b99d2; color: white"
             div3.style = "none"
             div4.style = "none"
-        } else if (valueDiv === "third"){
+        }
+        else if (valueDiv === "third"){
             div1.style = "none"
             div2.style = "none"
             div3.style = "font-weight: bold; background: #4b99d2; color: white"
             div4.style = "none"
-        } else if (valueDiv === "fourth"){
+        }
+        else if (valueDiv === "fourth"){
             div1.style = "none"
             div2.style = "none"
             div3.style = "none"

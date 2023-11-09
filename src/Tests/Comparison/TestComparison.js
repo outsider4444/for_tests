@@ -1,42 +1,25 @@
-import React, {useState} from 'react';
-import classes from "./TestComparison.module.css";
-import {Link} from "react-router-dom";
+import React, {useState, useEffect, Component} from 'react';
 
-const buttonComponent = (props) => {
-    return (
-        <div>
+const TestComparison = () => {
+    const [letters, setLetters] = useState(['A', 'B', 'C', 'D']);
+    const [numbers, setNumbers] = useState([1, 2, 3, 4]);
 
-        </div>
-    );
-}
-
-const TestComparison = (props) => {
-    let buttons = [
-        {id: 1, text: "1", key: 1, good_choice: 3, last_choice: null}
-    ];
 
     return (
         <div>
-            <button id={"button1"} onClick={() => onClickDisable(0)} className={classes.comparisonbtn}>1</button>
-            <button id={"button2"} onClick={() => onClickDisable(1)} className={classes.comparisonbtn}>2</button>
-            <button id={"button11"} onClick={() => onClickDisable(2)} className={classes.comparisonbtn}>11</button>
-            <button id={"button22"} onClick={() => onClickDisable(3)} className={classes.comparisonbtn}>22</button>
-
-            <button>check</button>
-
-            <Link to={"/test/question4"}>Next</Link>
+            <div>
+                <h2>Letters</h2>
+                    {letters.map((letter, index) => (
+                            <button key={index}> {letter} </button>
+                    ))}
+            </div>
+            <div>
+                <h2>Numbers</h2>
+                    {numbers.map((number, index) => (
+                        <button key={index}> {number} </button>
+                    ))}
+            </div>
         </div>
-
     );
-
-    function onClickDisable(id_button) {
-
-        let button1 = document.getElementById("button1");
-        let button2 = document.getElementById("button2");
-        let button3 = document.getElementById("button11");
-        let button4 = document.getElementById("button22");
-
-    };
 }
-
-    export default TestComparison;
+export default TestComparison;
