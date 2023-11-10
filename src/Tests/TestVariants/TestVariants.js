@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classes from "./TestVariants.module.css";
 import HeaderTest from "../HeaderTest/HeaderTest";
 
-const TestVariants = () => {
+const TestVariants = (props) => {
     const [answer, clicking] = useState("none");
 
     function onClickDivs(valueDiv, ans){
@@ -45,7 +45,7 @@ const TestVariants = () => {
 
     return (
         <div>
-            <HeaderTest/>
+            <HeaderTest value={props.value} />
             <h1>Ответьте на следуйщий вопрос: Вы абоба?</h1>
             <div className={classes.buttonsLine}>
                 <div className={classes.text1} id={"text1"} onClick={() => onClickDivs("first", "One")}>

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
+import HeaderTest from "../HeaderTest/HeaderTest";
 
 
 // Todo Что-то не так с распределением баллов за ответ. Хм...
-const TestMultipleChoice = () => {
+const TestMultipleChoice = (props) => {
     const [score, setScore] = useState(0);
     const [selectedAnswers, setSelectedAnswers] = useState(Array(4).fill(false));
 
@@ -31,6 +32,7 @@ const TestMultipleChoice = () => {
 
     return (
         <div>
+            <HeaderTest value={props.value} setValue={props.setValue} />
             <h1>Тест по истории</h1>
             <p>Выберите правильные ответы:</p>
             <button onClick={() => handleButtonClick(0)} id={"btn0"}>Ответ 1</button>

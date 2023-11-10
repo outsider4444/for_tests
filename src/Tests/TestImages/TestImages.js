@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import HeaderTest from "../HeaderTest/HeaderTest";
 import classes from "./TestImages.module.css";
 
-const TestImages = () => {
+const TestImages = (props) => {
     const [answer, clicking] = useState("none");
 
     function onClickDivs(valueDiv, ans){
@@ -48,7 +48,7 @@ const TestImages = () => {
 
     return (
         <div>
-            <HeaderTest/>
+            <HeaderTest value={props.value} setValue={props.setValue} />
             <h1>Ответьте на следуйщий вопрос: Вы абоба?</h1>
             <div className={classes.buttonsLine}>
                 <div className={classes.text1} id={"text1"} onClick={() => onClickDivs("first", "One")}>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import classes from "../TestVariants/TestVariants.module.css";
 
 class TestHistoricMap extends Component {
     constructor(props) {
@@ -33,9 +34,16 @@ class TestHistoricMap extends Component {
         // Например, изменить координаты, добавить/удалить маркеры и т.д.
     }
 
+    BtnNextLink(){
+        window.location = "/test/question5"
+    }
     render() {
         return (
-            <div id="map" style={{ height: '500px' }}></div>
+            <div>
+                <div  id="map" style={{ height: '500px' }}></div>
+                <button onClick={this.BtnNextLink} className={classes.nextButton}>Далее</button>
+            </div>
+
         );
     }
 }

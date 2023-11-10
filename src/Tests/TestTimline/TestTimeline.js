@@ -4,6 +4,7 @@ import {Timeline} from 'primereact/timeline';
 import {PrimeReactProvider} from 'primereact/api';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import {Link, NavLink} from "react-router-dom";
+import HeaderTest from "../HeaderTest/HeaderTest";
 
 
 const TestTimeline = (props) => {
@@ -64,6 +65,7 @@ const TestTimeline = (props) => {
 
     return (
         <div className={classes.content}>
+            <HeaderTest value={props.value} setValue={props.setValue} />
             <PrimeReactProvider>
                 <div className={classes.card_timeline}>
                     <Timeline value={years} className={classes.timeLineBar + " p-timeline-left"} layout="horizontal" align="bottom"
@@ -84,7 +86,7 @@ const TestTimeline = (props) => {
             </PrimeReactProvider>
             <br/>
             <button onClick={check}>Проверить</button>
-            <NavLink to={"/test/"}>Выйти</NavLink>
+            <NavLink to={"/test/question6"}>Далее</NavLink>
         </div>
     );
 };
