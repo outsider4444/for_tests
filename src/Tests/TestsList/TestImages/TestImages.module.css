@@ -16,7 +16,7 @@
 .buttonsLine{
     float: left;
     width: 100%;
-    margin-left: 100px;
+    padding-left: 100px;
 }
 h1{
     color: #003399;
@@ -53,6 +53,10 @@ button{
     background-color: white;
     color: #003399;
 }
-img{
-    border-radius: 25px;
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius:25px;
+    background: url("../../../../public/TestImages/5-44.jpg");
+    background-size: cover;
 }

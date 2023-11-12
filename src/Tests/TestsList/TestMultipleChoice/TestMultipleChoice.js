@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
-import HeaderTest from "../HeaderTest/HeaderTest";
+import HeaderTest from "../../HeaderTest/HeaderTest";
 
 
 // Todo Что-то не так с распределением баллов за ответ. Хм...
@@ -10,7 +10,7 @@ const TestMultipleChoice = (props) => {
 
     const handleButtonClick = (index) => {
         let btn = document.getElementById("btn" + index);
-        if (btn.style.backgroundColor != "green") {
+        if (btn.style.backgroundColor !== "green") {
             btn.style.backgroundColor = "green";
         } else {
             btn.style.backgroundColor = "#FCFCFC"

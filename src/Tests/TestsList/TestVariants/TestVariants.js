@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from "./TestVariants.module.css";
-import HeaderTest from "../HeaderTest/HeaderTest";
+import HeaderTest from "../../HeaderTest/HeaderTest";
 
 const TestVariants = (props) => {
     const [answer, clicking] = useState("none");

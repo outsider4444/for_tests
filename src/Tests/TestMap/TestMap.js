@@ -1,5 +1,4 @@
 import React from 'react';
-import Sidebar from "../../Sidebar/Sidebar";
 import classes from "./TestMap.module.css";
 
 const ButtonOnMap = (props) => {
@@ -13,9 +12,9 @@ const ButtonOnMap = (props) => {
     )
 }
 
-const TestMap = () => {
+const TestMap = (props) => {
     return (
-        <div>
+        <div className={classes.testMapBody}>
             <ButtonOnMap toLink={"toTestLink"} id={"firstBtn"} text={"1"}/>
             <ButtonOnMap toLink={"toTestLink"} id={"secondBtn"} text={"2"}/>
             <ButtonOnMap toLink={"toTestLink"} id={"thirdBtn"} text={"3"}/>

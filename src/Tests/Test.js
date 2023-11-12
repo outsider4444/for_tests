@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
-import TestVariants from "./TestVariants/TestVariants";
-import TestImages from "./TestImages/TestImages";
-import TestComparison from "./Comparison/TestComparison";
-import TestMultipleChoice from "./TestMultipleChoice/TestMultipleChoice";
-import TestHistoricMap from "./TestHistoricMap/TestHistoricMap";
-import TestTimeline from "./TestTimline/TestTimeline";
-import TestTrueOrFalse from "./TestTrueOrFalse/TestTrueOrFalse";
+import TestVariants from "./TestsList/TestVariants/TestVariants";
+import TestImages from "./TestsList/TestImages/TestImages";
+import TestMultipleChoice from "./TestsList/TestMultipleChoice/TestMultipleChoice";
+import TestHistoricMap from "./TestsList/TestHistoricMap/TestHistoricMap";
+import TestTimeline from "./TestsList/TestTimline/TestTimeline";
+import TestTrueOrFalse from "./TestsList/TestTrueOrFalse/TestTrueOrFalse";
 
 const Test = () => {
     const [value, setValue] = useState(10);

@@ -3,8 +3,8 @@ import classes from "./TestTimeline.module.css";
 import {Timeline} from 'primereact/timeline';
 import {PrimeReactProvider} from 'primereact/api';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
-import {Link, NavLink} from "react-router-dom";
-import HeaderTest from "../HeaderTest/HeaderTest";
+import {NavLink} from "react-router-dom";
+import HeaderTest from "../../HeaderTest/HeaderTest";
 
 
 const TestTimeline = (props) => {

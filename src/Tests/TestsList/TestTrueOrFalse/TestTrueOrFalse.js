@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from "./TestTrueOrFalse.module.css";
-import HeaderTest from "../HeaderTest/HeaderTest";
+import HeaderTest from "../../HeaderTest/HeaderTest";
 import {NavLink} from "react-router-dom";
 
 const TestTrueOrFalse = (props) => {
