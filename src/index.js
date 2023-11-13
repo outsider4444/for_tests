@@ -6,8 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ProSidebarProvider} from "react-pro-sidebar";
 import Test from "./Tests/Test";
+import Todo from "./Todo/Todo";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 
 root.render(
     <React.StrictMode>
@@ -16,6 +18,7 @@ root.render(
                 <ProSidebarProvider>
                     <Routes>
                         <Route path={"*"} element={<App/>}/>
+                        <Route path={"todo"} element={<Todo/>}/>
                         <Route path={"test/*"} element={<Test/>}/>
                     </Routes>
                 </ProSidebarProvider>

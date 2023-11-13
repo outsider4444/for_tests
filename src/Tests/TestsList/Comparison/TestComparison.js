@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from 'react';
+import React, {useState} from 'react';
 
 const TestComparison = () => {
     const [letters, setLetters] = useState(['A', 'B', 'C', 'D']);

@@ -9,16 +9,20 @@ import TestTrueOrFalse from "./TestsList/TestTrueOrFalse/TestTrueOrFalse";
 
 const Test = () => {
     const [value, setValue] = useState(10);
+    const [scoreForTest, setScoreForTest] = useState(0);
 
     return (
         <Routes>
-            <Route path={"question1"} element={<TestVariants value={10} setValue={setValue} />} />
-            <Route path={"question2"} element={<TestImages value={20} setValue={setValue}  />} />
+            <Route path={"question1"} element={<TestVariants value={10}
+                   setValue={setValue} scoreForTest={scoreForTest}
+                   setScoreForTest={setScoreForTest}/>
+            }/>
+            <Route path={"question2"} element={<TestImages value={20} setValue={setValue}/>}/>
             {/*<Route path={"question3"} element={<TestComparison />} />*/}
-            <Route path={"question3"} element={<TestMultipleChoice value={30} setValue={setValue} />} />
-            <Route path={"question4"} element={<TestHistoricMap value={40} setValue={setValue}/>} />
-            <Route path={"question5"} element={<TestTimeline value={50} setValue={setValue}/>} />
-            <Route path={"question6"} element={<TestTrueOrFalse value={60} setValue={setValue}/>} />
+            <Route path={"question3"} element={<TestMultipleChoice value={30} setValue={setValue}/>}/>
+            <Route path={"question4"} element={<TestHistoricMap value={40} setValue={setValue}/>}/>
+            <Route path={"question5"} element={<TestTimeline value={50} setValue={setValue}/>}/>
+            <Route path={"question6"} element={<TestTrueOrFalse value={60} setValue={setValue}/>}/>
         </Routes>
     );
 };

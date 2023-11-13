@@ -14,21 +14,6 @@ const Sidebar = (props) => {
     const {collapseSidebar, toggleSidebar, toggled} = useProSidebar();
     let state_for_map;
 
-    function toLink(link) {
-        window.location = link;
-    }
-
-    const toggle = () => {
-        toggleSidebar();
-        if (toggled) {
-            console.log(true);
-            collapseSidebar();
-        } else {
-            console.log(false);
-            collapseSidebar();
-        }
-    };
-
     if (location.pathname === "/") {
         state_for_map = true
     } else if (location.pathname === "/section2") {
@@ -45,7 +30,7 @@ const Sidebar = (props) => {
                 <Menu>
                     <MenuItem icon={<MenuOutlinedIcon/>} onClick={() => {
                         collapseSidebar();
-                    }} style={{textAlign: "center"}}> {" "}
+                    }} style={{textAlign: "center"}} id={classes["sidebar_toggle"]}> {" "}
                         <h2>Duplo</h2>
                     </MenuItem>
                     <MenuItem icon={<MapIcon/>} component={<Link to={props.sidebarLinkMap}/>}
