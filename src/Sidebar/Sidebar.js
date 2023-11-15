@@ -25,7 +25,7 @@ const Sidebar = (props) => {
     }
 
     return (
-        <div>
+        <div className={classes.content_sidebar}>
             <ProSidebar style={{height: "100vh"}}>
                 <Menu>
                     <MenuItem icon={<MenuOutlinedIcon/>} onClick={() => {
@@ -41,9 +41,15 @@ const Sidebar = (props) => {
                               className={location.pathname === "/sections" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>
                         Секции
                     </MenuItem>
-                    <MenuItem icon={<ReceiptOutlinedIcon/>}>Profile</MenuItem>
-                    <MenuItem icon={<HelpOutlineOutlinedIcon/>}>FAQ</MenuItem>
-                    <MenuItem icon={<CalendarTodayOutlinedIcon/>}>Calendar</MenuItem>
+                    <MenuItem icon={<ReceiptOutlinedIcon/>} component={<Link to="/todo"/>}
+                              className={location.pathname === "/todo" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>
+                        Обратная связь
+                    </MenuItem>
+                    <MenuItem icon={<HelpOutlineOutlinedIcon/>} component={<Link to="/diagram"/>}
+                              className={location.pathname === "/diagram" ? classes.sidebar_link_active : classes.sidebar_link_nonactive}>
+                        Диаграмма
+                    </MenuItem>
+                    {/*<MenuItem icon={<CalendarTodayOutlinedIcon/>}>Calendar</MenuItem>*/}
                 </Menu>
             </ProSidebar>
         </div>

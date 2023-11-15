@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ProSidebarProvider} from "react-pro-sidebar";
 import Test from "./Tests/Test";
 import Todo from "./Todo/Todo";
+import PieChartDemo from "./DiagramForTest/PieChartDemo";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,7 +19,6 @@ root.render(
                 <ProSidebarProvider>
                     <Routes>
                         <Route path={"*"} element={<App/>}/>
-                        <Route path={"todo"} element={<Todo/>}/>
                         <Route path={"test/*"} element={<Test/>}/>
                     </Routes>
                 </ProSidebarProvider>

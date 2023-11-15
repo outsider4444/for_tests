@@ -19,12 +19,16 @@ const TestTrueOrFalse = (props) => {
             div2.style = "font-weight: bold; background: #4b99d2; color: white"
         }
     }
-    function BtnToMainLink(){
-        window.location = "/"
+    function btnNextLink(){
+        console.log(props.score);
     }
-
-    function BtnNextLink(){
-        window.location = "/test/question2"
+    function btnCheckAnswer(){
+        let btn_check_answer = document.getElementById("btn_check_answer");
+        if (answer === false){
+            props.setScore(props.score + 1)
+        }
+        btn_check_answer.hidden = true
+        console.log(props.score);
     }
 
     return (
@@ -32,17 +36,16 @@ const TestTrueOrFalse = (props) => {
             <HeaderTest value={props.value} />
             <h1>Верно ли утверждение данное утверждение: Петр 1 был первым императором?</h1>
             <div className={classes.buttonsLine}>
-                <div className={classes.text1} id={"text1"} onClick={() => onClickDivs("first", "One")}>
+                <div className={classes.text1} id={"text1"} onClick={() => onClickDivs("first", true)}>
                     <span>Да</span>
                 </div>
-                <div className={classes.text1} id={"text2"} onClick={() => onClickDivs("second", "Two")}>
+                <div className={classes.text1} id={"text2"} onClick={() => onClickDivs("second", false)}>
                     <span>Нет</span>
                 </div>
 
             </div>
-            <button onClick={BtnToMainLink} className={classes.skipButton}>Пропустить</button>
-            <button onClick={BtnNextLink} className={classes.nextButton}>Далее</button> <br/>
-            <NavLink to={"/"}>Выход</NavLink>
+            <button onClick={btnCheckAnswer} id={"btn_check_answer"}>Проверить</button>
+            <NavLink to={"/test/result"}>Выход</NavLink>
         </div>
     );
 };

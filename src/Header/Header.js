@@ -26,6 +26,14 @@ const Header = (props) => {
         id_location = null
         name_for_location = "Разделы"
     }
+    if (location.pathname === "/todo"){
+        id_location = null
+        name_for_location = "Обратная связь"
+    }
+    if (location.pathname === "/diagram"){
+        id_location = null
+        name_for_location = "Ответы на тест"
+    }
 
     return (
         <div className={classes.header}>

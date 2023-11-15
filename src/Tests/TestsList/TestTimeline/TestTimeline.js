@@ -8,12 +8,6 @@ import HeaderTest from "../../HeaderTest/HeaderTest";
 
 
 const TestTimeline = (props) => {
-    // const [cardList, setCardList] = useState([
-    //     {id: 1, order: 1, text: "Карточка 1"},
-    //     {id: 2, order: 2, text: "Карточка 2"},
-    //     {id: 3, order: 3, text: "Карточка 3"},
-    //     {id: 4, order: 4, text: "Карточка 4"},
-    // ])
     const [currentCard, setCurrentCard] = useState(null)
 
     function dragStartHandler(e, card) {
@@ -58,9 +52,33 @@ const TestTimeline = (props) => {
         {id: 3, order: 3, text: "Петр 3"},
         {id: 4, order: 4, text: "Петр 4"},
     ])
-
-    function check(){
-        console.log(eventList)
+    function btnNextLink(){
+        props.setId_test(props.id_test + 1)
+        console.log(props.score);
+    }
+    function btnCheckAnswer(){
+        let btn_check_answer = document.getElementById("btn_check_answer");
+        let value_for_check = 0
+        eventList.forEach(event =>{
+            if (event.id === 1 && event.order === 3){
+                value_for_check += 1;
+            }
+            if (event.id === 2 && event.order === 1){
+                value_for_check += 1;
+            }
+            if (event.id === 3 && event.order === 4){
+                value_for_check += 1;
+            }
+            if (event.id === 4 && event.order === 2){
+                value_for_check += 1;
+            }
+            if (value_for_check === 4){
+                console.log("good")
+                props.setScore(props.score + 1)
+            }
+        })
+        // btn_check_answer.hidden = true
+        console.log(props.score);
     }
 
     return (
@@ -85,8 +103,8 @@ const TestTimeline = (props) => {
                 </div>
             </PrimeReactProvider>
             <br/>
-            <button onClick={check}>Проверить</button>
-            <NavLink to={"/test/question6"}>Далее</NavLink>
+            <button onClick={btnCheckAnswer} id={"btn_check_answer"}>Проверить</button>
+            <NavLink to={"/test/question"+props.id_test} onClick={btnNextLink}>Далее</NavLink>
         </div>
     );
 };

@@ -5,6 +5,8 @@ import {db} from "../firebase";
 import {useLocation} from "react-router-dom";
 import classes from "./Todo.module.css"
 import constsFirebase from "../consts";
+import Header from "../Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
 
 
 const Todo = () => {
@@ -43,13 +45,9 @@ const Todo = () => {
 
 
     return (
-        <section className="todo-container">
-            <div className="todo">
-                <h1 className="header">
-                    Todo-App
-                </h1>
-
-                <div>
+        <div>
+            <section className="todo-container">
+                <div className={classes.todo}>
                     <div>
                         <input type="text" placeholder="What is your name?" onChange={(e) => setName(e.target.value)}/>
                         <input type="text" placeholder="What is your score" onChange={(e) => setScore(e.target.value)}/>
@@ -59,15 +57,15 @@ const Todo = () => {
                             Submit
                         </button>
                     </div>
-                </div>
 
-                <div className="todo-content">
-                    {todos?.map((todo, i) => (
-                        <p key={i}> {todo.Name}: {todo.Score}</p>
-                    ))}
+                    <div className="todo-content">
+                        {todos?.map((todo, i) => (
+                            <p key={i}> {todo.Name}: {todo.Score}</p>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     )
 }
 

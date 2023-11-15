@@ -1,4 +1,6 @@
-
+.content_sidebar{
+    float: left;
+}
 .sidebar_link{
 }
 .sidebar_link_active{
