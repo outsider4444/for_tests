@@ -2,38 +2,52 @@ import React, {useState} from 'react';
 import classes from "./TestVariants.module.css";
 import HeaderTest from "../../HeaderTest/HeaderTest";
 import {Link} from "react-router-dom";
+import ButtonCheckAnswer from "../../../Templates/Buttons/ButtonCheckAnswer";
+import btn_classes from "../../../Templates/Buttons/Button.module.css";
+import LinkNextQuestion from "../../../Templates/Buttons/LinkNextQuestion";
 
 const TestVariants = (props) => {
     const [answer, clicking] = useState(0);
+    const [btnIsDisabled, setBtnIsDisabled] = useState(true);
+    const [btnIsHidden, setBtnIsHidden] = useState(false);
+    const [linkIsHidden, setLinkIsHidden] = useState(true);
+    const [isEnded, setIsEnded] = useState(false);
+
+
+    let btn_check_answer = document.getElementById("btn_check_answer");
 
     function onClickDivs(valueDiv, ans){
-        clicking(ans)
+        if (!isEnded){
+            clicking(ans)
+            let btn_check_answer = document.getElementById("btn_check_answer");
 
-        let div1 = document.getElementById("text1");
-        let div2 = document.getElementById("text2");
-        let div3 = document.getElementById("text3");
-        let div4 = document.getElementById("text4");
+            let div1 = document.getElementById("text1");
+            let div2 = document.getElementById("text2");
+            let div3 = document.getElementById("text3");
+            let div4 = document.getElementById("text4");
 
-        if (valueDiv === "first"){
-            div1.style = "font-weight: bold; background: #4b99d2; color: white"
-            div2.style = "none"
-            div3.style = "none"
-            div4.style = "none"
-        } else if (valueDiv === "second"){
-            div1.style = "none"
-            div2.style = "font-weight: bold; background: #4b99d2; color: white"
-            div3.style = "none"
-            div4.style = "none"
-        } else if (valueDiv === "third"){
-            div1.style = "none"
-            div2.style = "none"
-            div3.style = "font-weight: bold; background: #4b99d2; color: white"
-            div4.style = "none"
-        } else if (valueDiv === "fourth"){
-            div1.style = "none"
-            div2.style = "none"
-            div3.style = "none"
-            div4.style = "font-weight: bold; background: #4b99d2; color: white"
+            if (valueDiv === "first"){
+                div1.style = "font-weight: bold; background: #4b99d2; color: white"
+                div2.style = "none"
+                div3.style = "none"
+                div4.style = "none"
+            } else if (valueDiv === "second"){
+                div1.style = "none"
+                div2.style = "font-weight: bold; background: #4b99d2; color: white"
+                div3.style = "none"
+                div4.style = "none"
+            } else if (valueDiv === "third"){
+                div1.style = "none"
+                div2.style = "none"
+                div3.style = "font-weight: bold; background: #4b99d2; color: white"
+                div4.style = "none"
+            } else if (valueDiv === "fourth"){
+                div1.style = "none"
+                div2.style = "none"
+                div3.style = "none"
+                div4.style = "font-weight: bold; background: #4b99d2; color: white"
+            }
+            setBtnIsDisabled(false)
         }
     }
     function btnToMainLink(){
@@ -45,15 +59,17 @@ const TestVariants = (props) => {
         console.log(props.score);
     }
     function btnCheckAnswer(){
-        let btn_check_answer = document.getElementById("btn_check_answer");
         if (answer === 3){
             props.setScore(1);
         }
         else {
             props.setScore(0);
         }
-        btn_check_answer.hidden = true
+
         console.log(props.score);
+        setLinkIsHidden(false);
+        setBtnIsHidden(true);
+        setIsEnded(true);
     }
 
     return (
@@ -74,9 +90,10 @@ const TestVariants = (props) => {
                     <span>Ответ 4</span>
                 </div>
             </div>
-            <button onClick={btnToMainLink} className={classes.skipButton}>Пропустить</button><br/>
-            <button onClick={btnCheckAnswer} id={"btn_check_answer"}>Проверить</button><br/>
-            <Link to={"/test/question"+props.id_test} onClick={btnNextLink} className={classes.nextButton}>Далее</Link>
+            <div className={classes.buttonsLine_answer}>
+                <ButtonCheckAnswer disabled={btnIsDisabled} functionOnClick={btnCheckAnswer} hidden={btnIsHidden} text={"Проверить"}/>
+                <LinkNextQuestion id_test={props.id_test} hidden={linkIsHidden} functionOnClick={btnNextLink} text={"Далее"}/>
+            </div>
         </div>
     );
 };

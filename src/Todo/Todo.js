@@ -5,8 +5,8 @@ import {db} from "../firebase";
 import {useLocation} from "react-router-dom";
 import classes from "./Todo.module.css"
 import constsFirebase from "../consts";
-import Header from "../Header/Header";
-import Sidebar from "../Sidebar/Sidebar";
+import Header from "../Templates/Header/Header";
+import Sidebar from "../Templates/Sidebar/Sidebar";
 
 
 const Todo = () => {

@@ -1,8 +1,8 @@
 import './App.css';
 import React, {useState} from "react";
-import Header from "./Header/Header";
+import Header from "./Templates/Header/Header";
 import {Route, Routes, useLocation} from "react-router-dom";
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "./Templates/Sidebar/Sidebar";
 import TestMap from "./Tests/TestMap/TestMap";
 import Section from "./Sections/Section";
 import Todo from "./Todo/Todo";

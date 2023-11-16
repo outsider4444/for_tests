@@ -5,10 +5,13 @@ import {Link} from "react-router-dom";
 
 const TestImages = (props) => {
     const [answer, clicking] = useState(null);
+    const [btnIsDisabled, setBtnIsDisabled] = useState(true);
+    let btn_check_answer = document.getElementById("btn_check_answer");
     const score_for_checking = props.score;
 
     function onClickDivs(valueDiv, ans) {
         clicking(ans)
+        let btn_check_answer = document.getElementById("btn_check_answer");
 
         let div1 = document.getElementById("text1");
         let div2 = document.getElementById("text2");
@@ -36,6 +39,7 @@ const TestImages = (props) => {
             div3.style = "none"
             div4.style = "font-weight: bold; background: #4b99d2; color: white"
         }
+        setBtnIsDisabled(false)
     }
 
     function btnToMainLink() {

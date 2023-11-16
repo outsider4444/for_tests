@@ -1,0 +1,24 @@
+.check_btn{
+    border-radius: 25px;
+    padding: 13px;
+    border: none;
+    font-size: 24pt;
+    background-color: #6366F1;
+    color: white;
+    cursor: pointer;
+}
+.check_btn:disabled{
+    background-color: #bababa;
+    color: #4d4d4d;
+    cursor: default;
+}
+
+.link_next_question{
+    border-radius: 25px;
+    padding: 13px;
+    border: none;
+    font-size: 24pt;
+    background-color: #6366F1;
+    color: white;
+    text-decoration: none;
+}
